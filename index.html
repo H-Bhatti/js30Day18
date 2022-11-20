@@ -182,6 +182,17 @@
     </li>
   </ul>
 <script>
+
+const timeNode = [...document.querySelectorAll("[data-time]")];
+console.log (timeNode)
+const time = timeNode.map(element=>element.dataset.time)
+              .map(element=>{
+                const [mins, sec]=element.split(":").map(parseFloat)
+                return (mins*60)+sec;
+              })
+console.log(time)
+
+
 </script>
 </body>
 </html>
